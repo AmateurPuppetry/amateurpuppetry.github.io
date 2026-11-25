@@ -1,0 +1,85 @@
+:root{
+  --red:#e94f4f; --orange:#f59e42; --yellow:#f2c94c; --green:#43a873;
+  --blue:#4a90d9; --purple:#9b6dd6; --pink:#ef7aa8;
+  --ink:#33302b; --muted:#6b665e; --paper:#fffdf8; --line:#f0e6d8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);
+  font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,"Noto Sans JP",sans-serif;
+  font-size:19px;line-height:1.85;-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{color:#2569a8}
+/* フェルトのガーランド */
+.bunting{display:flex;overflow:hidden;height:26px}
+.bunting i{flex:1;height:26px;clip-path:polygon(0 0,100% 0,50% 100%)}
+.bunting i:nth-child(7n+1){background:var(--red)} .bunting i:nth-child(7n+2){background:var(--orange)}
+.bunting i:nth-child(7n+3){background:var(--yellow)} .bunting i:nth-child(7n+4){background:var(--green)}
+.bunting i:nth-child(7n+5){background:var(--blue)} .bunting i:nth-child(7n+6){background:var(--purple)}
+.bunting i:nth-child(7n){background:var(--pink)}
+header.site{background:var(--paper);border-bottom:3px dashed var(--line)}
+.site-in{max-width:920px;margin:0 auto;padding:14px 18px 10px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-weight:900;font-size:1.25rem;color:var(--ink);text-decoration:none;letter-spacing:.02em}
+.logo .gloves{display:inline-flex;gap:3px;margin-right:8px;vertical-align:-3px}
+.logo .gloves i{width:16px;height:20px;border-radius:8px 8px 5px 5px;display:inline-block}
+nav.main{margin-left:auto}
+nav.main ul{display:flex;gap:4px;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+nav.main a{display:block;padding:8px 12px;border-radius:999px;text-decoration:none;color:var(--ink);font-size:.95rem;font-weight:700;background:#fff;border:2px solid var(--line)}
+nav.main a[aria-current]{background:var(--yellow);border-color:var(--yellow)}
+main{max-width:920px;margin:0 auto;padding:0 18px 56px}
+/* ヒーロー */
+.hero{padding:34px 0 8px;text-align:center}
+.kicker{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:2px 16px;font-weight:800;font-size:.9rem;box-shadow:3px 3px 0 var(--yellow)}
+.hero h1{font-size:clamp(2.1rem,8.5vw,3.5rem);line-height:1.35;margin:20px 0 14px;font-weight:900;letter-spacing:.01em}
+.hero h1 .hl-red{color:var(--red)} .hero h1 .hl-blue{color:var(--blue)} .hero h1 .hl-green{color:var(--green)}
+.hero .lead{font-size:1.08rem;max-width:640px;margin:0 auto;text-align:left}
+.hero-fig{margin:26px auto 6px;max-width:680px}
+.hero-fig img{border-radius:22px;border:4px solid #fff;box-shadow:0 6px 24px rgba(80,60,20,.16)}
+.hero-fig figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+/* 案内役 */
+.guide{display:flex;gap:18px;align-items:center;background:var(--paper);border:3px solid var(--line);border-radius:22px;padding:18px 20px;margin:30px 0}
+.guide img{width:118px;height:148px;object-fit:cover;object-position:top;border-radius:16px;flex:none;background:#fff}
+.guide p{margin:0;font-size:1rem}
+.guide .who{font-weight:900;color:var(--red);display:block;margin-bottom:4px}
+section{margin:44px 0}
+h2{font-size:1.55rem;line-height:1.5;margin:0 0 16px;padding-left:16px;border-left:10px solid var(--yellow);font-weight:900}
+h2.c-red{border-color:var(--red)} h2.c-blue{border-color:var(--blue)} h2.c-green{border-color:var(--green)}
+h2.c-pink{border-color:var(--pink)} h2.c-purple{border-color:var(--purple)} h2.c-orange{border-color:var(--orange)}
+p{margin:0 0 1em}
+ul,ol{padding-left:1.3em} li{margin:.35em 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:20px 0}
+.card{border:3px solid var(--line);border-radius:18px;padding:18px;background:#fff;text-decoration:none;color:var(--ink);display:block}
+.card h3{margin:0 0 8px;font-size:1.2rem}
+.card p{font-size:.98rem;margin:0 0 10px}
+.card .go{font-weight:900;color:#2569a8}
+.card.f-red{border-top:10px solid var(--red)} .card.f-blue{border-top:10px solid var(--blue)}
+.card.f-green{border-top:10px solid var(--green)} .card.f-pink{border-top:10px solid var(--pink)}
+.card.f-purple{border-top:10px solid var(--purple)} .card.f-orange{border-top:10px solid var(--orange)}
+table{border-collapse:collapse;width:100%;margin:18px 0;font-size:.97rem;line-height:1.65}
+th,td{border:2px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#fdf3d7;font-weight:800}
+tr:nth-child(even) td{background:#fffaf0}
+.dialogue{background:#f4f9ff;border-radius:18px;padding:18px 22px;margin:18px 0}
+.dialogue p{margin:.4em 0}
+.note{font-size:.9rem;color:var(--muted)}
+.steps{counter-reset:step;list-style:none;padding:0}
+.steps li{background:var(--paper);border:3px solid var(--line);border-radius:18px;padding:16px 18px 16px 74px;position:relative;margin:14px 0}
+.steps li::before{counter-increment:step;content:counter(step);position:absolute;left:16px;top:16px;width:42px;height:42px;border-radius:50%;color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.steps li:nth-child(5n+1)::before{background:var(--red)} .steps li:nth-child(5n+2)::before{background:var(--orange)}
+.steps li:nth-child(5n+3)::before{background:var(--green)} .steps li:nth-child(5n+4)::before{background:var(--blue)}
+.steps li:nth-child(5n)::before{background:var(--purple)}
+.steps b{display:block;font-size:1.08rem}
+.big-quote{font-size:1.35rem;font-weight:900;line-height:1.7;text-align:center;background:linear-gradient(transparent 62%,#ffe9a8 62%);padding:6px 4px;margin:26px 0}
+.next{margin:52px 0 0;background:var(--paper);border:3px dashed #e5d5b8;border-radius:18px;padding:20px 22px;text-align:center}
+.next a{display:inline-block;margin-top:10px;background:var(--red);color:#fff;font-weight:900;text-decoration:none;padding:12px 28px;border-radius:999px;font-size:1.05rem}
+footer.site{border-top:3px dashed var(--line);background:var(--paper)}
+.foot-in{max-width:920px;margin:0 auto;padding:26px 18px 40px;font-size:.92rem;color:var(--muted)}
+.foot-in nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 16px;padding:0;margin:0 0 14px}
+.foot-in a{color:var(--ink);font-weight:700;text-decoration:none}
+@media (max-width:560px){
+  body{font-size:18px}
+  .guide{flex-direction:row;padding:14px}
+  .guide img{width:92px;height:116px}
+  th,td{padding:8px 9px}
+  nav.main{margin-left:0}
+}
